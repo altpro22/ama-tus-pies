@@ -1,21 +1,21 @@
 const CONFIG = {
-    whatsapp: "4491131722",
-    facebook: "https://www.facebook.com/pepe.moreno.9235",
-    instagram: "https://www.instagram.com/ia_hacer_dinero/",
-    maps: "https://maps.app.goo.gl/awfbCueopAjmRnFX7", 
-    youtubeUrl: "https://www.youtube.com/shorts/WhSWTBxVpQ0",
+    whatsapp: "5552924717",
+    facebook: "https://www.facebook.com/profile.php?id=61575004556983&sk=directory_contact_info",
+    instagram: "https://www.instagram.com/jldavid_mx/",
+    maps: "https://maps.app.goo.gl/HN7bNvnZ56yEZTP76", 
+    youtubeUrl: "https://www.youtube.com/shorts/7NWN73CYBlY",
     textos: {
         cat1: { 
             t: "NUESTRA HISTORIA", 
-            c: "Con más de 20 años de trayectoria en Aguascalientes, nuestra clínica de podología ha sido el referente de salud para miles de hidrocálidos. Lo que comenzó como un pequeño sueño dedicado al bienestar, hoy es una institución consolidada que combina experiencia artesanal con tecnología de vanguardia para que cada paso de nuestros pacientes sea firme y sin dolor." 
+            c: "Nacemos de la pasión por la perfección estética. En nuestro santuario, cada trazo y cada corte se ejecuta con la maestría de un artist, garantizando que tu imagen refleje la elegancia y el poder que llevas dentro. Somos más que un salón, somos tu aliado en la creación de una marca personal inolvidable." 
         },
         cat2: { 
-            t: "SERVICIOS INTEGRALES", 
-            c: "Ofrecemos una gama completa de cuidados especializados:\n\n• Quiropodia completa (corte correcto y eliminación de durezas).\n• Tratamiento de onicocriptosis (uñas encarnadas).\n• Eliminación de verrugas plantares.\n• Tratamiento para micosis (hongos) y pie de atleta.\n• Ortesis de silicona y plantillas personalizadas.\n• Hidratación profunda y cuidado del pie diabético." 
+            t: "SERVICIOS EXCLUSIVOS", 
+            c: "Desde colorimetría avanzada que respeta la salud de tu fibra capilar, hasta diseños de corte vanguardistas. Nuestro equipo domina las tendencias globales de Balayage, tratamientos de reconstrucción profunda y estilismo para eventos de alto nivel. Aquí, la calidad no es un servicio, es nuestro estándar innegociable." 
         },
         cat3: { 
-            t: "ATENCIÓN PERSONALIZADA", 
-            c: "Entendemos que tu salud no puede esperar. Por ello, ofrecemos servicio personalizado tanto en nuestra clínica equipada con los más altos estándares de higiene, como en la comodidad de tu hogar. Contamos con protocolos de bioseguridad rigurosos, materiales esterilizados y profesionales titulados para garantizarte un servicio seguro, profesional y totalmente confiable." 
+            t: "CLUB DE EXCLUSIVIDAD", 
+            c: "La exclusividad merece reconocimiento. Disfruta de nuestras promociones diseñadas para la mujer Mona Lisa: \n\n• LUNES DE COLOR: 20% de descuento en servicios químicos.\n• MARTES DE HIDRATACIÓN: Tratamiento VIP en cada corte.\n• JUEVES DE AMIGAS: Promociones grupales exclusivas." 
         }
     }
 };
@@ -89,13 +89,16 @@ function openLightbox(src, arr, hideControls) {
     playClick();
     currentGallery = arr;
     currentIndex = arr.indexOf(src);
+    
     const lightboxEl = document.getElementById('lightbox');
     const imgEl = document.getElementById('lightbox-image');
+    
     if(hideControls) {
         lightboxEl.classList.add('hide-nav-arrows');
     } else {
         lightboxEl.classList.remove('hide-nav-arrows');
     }
+    
     imgEl.src = src;
     lightboxEl.style.display = 'flex';
 }
@@ -118,9 +121,28 @@ function closeLightbox() { document.getElementById('lightbox').style.display = '
 function closeAppContent() { document.getElementById('dynamic-content-layer').style.display = 'none'; }
 function closeTextZoom() { document.getElementById('text-zoom-modal').style.display = 'none'; }
 
+function openBrandModal(modalId) {
+    playClick();
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'flex';
+    }
+}
+
+function closeBrandModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+
+function playClickSound() {
+    playClick();
+}
+
 function openWAChat() {
     playClick();
-    window.open(`https://wa.me/${CONFIG.whatsapp}?text=Hola, deseo agendar una cita podológica.`, '_blank');
+    window.open(`https://wa.me/${CONFIG.whatsapp}?text=Hola, deseo agendar una cita.`, '_blank');
 }
 
 function toggleAudioGlobal() {
@@ -152,6 +174,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 async function shareExperienceRobust() {
-    try { await navigator.share({ title: 'Ama tus pies - Podología', url: window.location.href }); }
+    try { await navigator.share({ title: 'Salón Express Mona Lisa', url: window.location.href }); }
     catch { alert("Enlace copiado al portapapeles."); }
 }

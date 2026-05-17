@@ -4,20 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
     
-    <!-- Configuración de Redes Sociales (Meta Tags) -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://altpro22.github.io/ama-tus-pies/" />
-    <meta property="og:title" content="Ama tus pies - podología | Cuidado Profesional" />
-    <meta property="og:description" content="Especialistas en salud podológica en Aguascalientes. Clínica y servicio a domicilio." />
+    <meta property="og:url" content="https://altpro22.github.io/Jean-Luis-David/" />
+    <meta property="og:title" content="Jean Louis David México | Magazine Edition" />
+    <meta property="og:description" content="Descubre la vanguardia en estilismo y exclusividad. Agenda tu cita en nuestra edición de revista digital." />
     
-    <!-- Imagen de previsualización -->
-    <meta property="og:image" content="https://altpro22.github.io/ama-tus-pies/assets/brand/og_podologia.jpg" />
-    <meta property="og:image:secure_url" content="https://altpro22.github.io/ama-tus-pies/assets/brand/og_podologia.jpg" />
+    <meta property="og:image" content="https://altpro22.github.io/Jean-Luis-David/assets/brand/og_jean.jpg?v=1.1" />
+    <meta property="og:image:secure_url" content="https://altpro22.github.io/Jean-Luis-David/assets/brand/og_jean.jpg?v=1.1" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
-    <title>Ama tus pies - podología | BOCA EN BOCA CARD</title>
+    <title>Jean Louis David México | BOCA EN BOCA CARD</title>
     
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -31,16 +29,24 @@
 
     <section id="portada-hub" class="main-hub">
         <header class="magazine-header">
-            <h1 class="agency-name">Ama tus pies - podología</h1>
+            <div class="header-title-container">
+                <h1 class="agency-name">Jean Louis David México</h1>
+                <div class="download-track-container">
+                    <p class="download-text">Descarga nuestra canción</p>
+                    <a href="assets/sounds/spot-intro.mp3" download="spot-intro.mp3" class="btn-download-audio" onclick="playClickSound()">
+                        <i class="fas fa-download"></i> DESCARGAR
+                    </a>
+                </div>
+            </div>
             <img src="assets/brand/logo-mini.png" alt="Logo" class="agency-logo">
         </header>
 
         <div class="mosaic-grid">
             <div class="mosaic-item hero-block" onclick="openProfileZoom()">
-                <img id="profile-pic-img" src="assets/hero/main-photo.jpg" alt="Ama tus pies">
+                <img id="profile-pic-img" src="assets/hero/main-photo.jpg" alt="Mona Lisa">
                 <div class="hero-overlay">
-                    <span class="edition-label">CONECTA</span>
-                    <h2 class="hero-title">Ama tus pies - podología</h2>
+                    <span class="edition-label">BOCA EN BOCA CARD</span>
+                    <h2 class="hero-title">Jean Louis David México</h2>
                 </div>
             </div>
 
@@ -49,11 +55,10 @@
                     <img src="assets/hero/video-thumb.jpg" alt="Video">
                     <div class="yt-play-mini"><i class="fab fa-youtube"></i></div>
                 </div>
-                <span class="block-label">DA CLIC AL VIDEO DESPUÉS DE ABRIRLO</span>
+                <span class="block-label">DA CLIC AL VIDEO DESPUES DE ABRIRLO</span>
             </div>
 
             <div class="mosaic-item lead-block">
-                <!-- Este botón llamará al número de citas (449 113 1722) configurado en script.js -->
                 <button class="btn-shiny-gold shine-effect" onclick="openWAChat()">
                     AGENDA TU CITA AQUÍ
                 </button>
@@ -81,16 +86,42 @@
                     </button>
                 </div>
             </div>
+            
+            <div class="mosaic-item custom-actions-block">
+                <button class="btn-custom-action btn-recommended-businesses" onclick="openBrandModal('modal-negocios')">
+                    NEGOCIOS RECOMENDADOS
+                </button>
+                <button class="btn-custom-action btn-vip-promotions" onclick="openBrandModal('modal-promociones')">
+                    PROMOCIONES PARA CLIENTES VIP
+                </button>
+            </div>
         </div>
 
         <div class="credits-altpro-compact">
             <span class="produced-by">BOCA EN BOCA CARD Produced by Alt Pro</span>
-            <!-- Este número se mantiene como el de soporte original -->
             <a href="https://wa.me/524491472336" target="_blank" class="altpro-link">
                 <i class="fab fa-whatsapp"></i> 449 147 2336
             </a>
         </div>
     </section>
+
+    <div id="modal-negocios" class="overlay-modal brand-custom-modal" style="display: none;" onclick="closeBrandModal('modal-negocios')">
+        <button class="btn-close-circular" onclick="closeBrandModal('modal-negocios')">×</button>
+        <div class="zoom-premium-content" onclick="event.stopPropagation()">
+            <div class="zoom-image-wrapper">
+                <img src="assets/brand/negocios.jpg" alt="Negocios Recomendados" class="brand-modal-img">
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-promociones" class="overlay-modal brand-custom-modal" style="display: none;" onclick="closeBrandModal('modal-promociones')">
+        <button class="btn-close-circular" onclick="closeBrandModal('modal-promociones')">×</button>
+        <div class="zoom-premium-content" onclick="event.stopPropagation()">
+            <div class="zoom-image-wrapper">
+                <img src="assets/brand/promociones.jpg" alt="Promociones VIP" class="brand-modal-img">
+            </div>
+        </div>
+    </div>
 
     <main id="dynamic-content-layer" class="content-overlay" style="display: none;">
         <button class="btn-close-circular" onclick="closeAppContent()">×</button>
@@ -100,8 +131,8 @@
         <section class="tab-pane" id="cat4-pane" style="display: none;">
             <h2 class="pane-title">CONTACTO</h2>
             <div class="contact-panel-robust">
-                <p class="address-tag"><i class="fas fa-map-pin"></i> Aramón 317 Capittala, Ags</p>
-                <p class="address-tag"><i class="fas fa-phone"></i> 449 113 1722</p>
+                <p class="address-tag"><i class="fas fa-map-pin"></i> Campos Elíseos 218, Polanco, Ciudad de México</p>
+                <p class="address-tag"><i class="fas fa-phone"></i> 55 5292 4717</p>
                 <div class="social-vertical-stack">
                     <a id="link-fb-direct" href="#" target="_blank" class="stack-btn fb-color"><i class="fab fa-facebook"></i> FACEBOOK</a>
                     <a id="link-maps-direct" href="#" target="_blank" class="stack-btn maps-color"><i class="fas fa-location-dot"></i> CÓMO LLEGAR</a>
@@ -130,7 +161,7 @@
                 <img src="assets/brand/logo-mini.png" class="card-logo" style="width: 40px; margin-right: 10px;">
                 <h3 id="text-zoom-title"></h3>
             </div>
-            <hr class="gold-divider" style="border: 0; border-top: 1px solid #ff751f; margin: 15px 0;">
+            <hr class="gold-divider" style="border: 0; border-top: 1px solid #d4af37; margin: 15px 0;">
             <div id="text-zoom-content" style="white-space: pre-line;"></div>
         </div>
     </div>
