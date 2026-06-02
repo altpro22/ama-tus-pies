@@ -15,7 +15,7 @@ const CONFIG = {
     facebook: "https://www.facebook.com/profile.php?id=61580472103059",
     instagram: "https://www.instagram.com/ama.tus.pies/",
     maps: "https://maps.app.goo.gl/jNZHYrvmPoJCW2Xb6", 
-    youtubeUrl: "https://www.youtube.com/shorts/pOfLE4TKw50",
+    youtubeUrl: "https://www.youtube.com/shorts/cVyPSwEyjbI",
     textos: {
         cat1: { t: "CONÓCENOS / ABOUT US", c: "Somos una clínica especializada en el cuidado integral de la salud de tus pies. Fusionamos experiencia médica, tecnología avanzada y un trato humano cálido para aliviar tus molestias y prevenir futuras afecciones." },
         cat2: { t: "SERVICIOS EXCLUSIVOS / SERVICES", c: "Ofrecemos quiropodología integral para eliminar callos y durezas, junto con soluciones rápidas para uñas encarnadas y hongos con láser. " },
